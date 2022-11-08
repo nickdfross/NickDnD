@@ -11,8 +11,10 @@ namespace NameGenerator
     {
         static void Main(string[] args)
         {
-            //GeneratePlaceNames("input.txt");
-            GenerateTavernNames("prefixes.txt", "adjective.txt", "verb.txt", "suffixes.txt");
+            // Add a basic menu system and while loop
+
+            GeneratePlaceNames("input.txt");
+            //GenerateTavernNames("prefixes.txt", "adjective.txt", "verb.txt", "suffixes.txt");
             Console.ReadLine();
         }
 
@@ -38,6 +40,7 @@ namespace NameGenerator
                 {
                     temp += elements[random.Next(elements.Count)];
                 }
+                char.ToUpper(temp[0]);
                 names.Add(temp);
             }
 
